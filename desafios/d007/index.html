@@ -1,20 +1,62 @@
 <!DOCTYPE html>
+<!-- Declara que este é um documento HTML5 -->
+
 <html lang="pt-br">
+<!-- A tag <html> envolve todo o conteúdo da página.
+     O atributo lang="pt-br" informa que o idioma principal do site é o português do Brasil. -->
+
 <head>
+    <!-- A seção <head> contém metadados (informações sobre a página) 
+         que não aparecem diretamente no corpo do site. -->
+
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8,
+         permitindo acentos e caracteres especiais do português. -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz com que a página se adapte a dispositivos móveis
+         (layout responsivo). A largura será igual à tela do dispositivo
+         e o zoom inicial será 1. -->
+
     <title>Desafio # 007</title>
+    <!-- Define o título da aba do navegador. -->
+
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <!-- Adiciona o ícone (favicon) que aparece na aba do navegador. -->
 </head>
+
 <body>
+    <!-- A seção <body> contém todo o conteúdo visível da página. -->
+
     <header>
+        <!-- A tag <header> define o cabeçalho da página. -->
         <h1>Imagem Flexível</h1>
+        <!-- <h1> é o título principal da página. -->
     </header>
-    <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiência  &#128558;</p>
+
+    <p>
+        Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela 
+        para aproveitar a melhor experiência &#128558;
+    </p>
+    <!-- <p> define um parágrafo de texto.
+         O código &#128558; insere um emoji (carinha surpresa). -->
+
     <picture>
+        <!-- A tag <picture> permite carregar imagens diferentes
+             dependendo do tamanho da tela do usuário (design responsivo). -->
+
         <source media="(max-width: 750px)" srcset="imagens/paisagem-p.png" type="image/png">
+        <!-- Se a tela tiver até 750px de largura, esta imagem (pequena) será exibida. -->
+
         <source media="(max-width: 1050px)" srcset="imagens/paisagem-m.png" type="image/png">
+        <!-- Se a tela tiver até 1050px, mas for maior que 750px,
+             esta imagem (média) será exibida. -->
+
         <img src="imagens/paisagem-g.png" alt="Imagem do Desafio">
+        <!-- Caso nenhuma das condições acima seja atendida, será exibida
+             a imagem grande (padrão).
+             O atributo alt fornece um texto alternativo para acessibilidade
+             e caso a imagem não carregue. -->
     </picture>
     
 </body>
