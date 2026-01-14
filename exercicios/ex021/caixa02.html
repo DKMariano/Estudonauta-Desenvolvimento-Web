@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- Define que o documento segue o padrão HTML5 -->
+<html lang="pt-br">
+<head>
+    <!-- Define o conjunto de caracteres para aceitar acentos -->
+    <meta charset="UTF-8">
+
+    <!-- Configura a página para se adaptar a diferentes tamanhos de tela (responsividade) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece na aba do navegador -->
+    <title>Modelo de Caixas</title>
+
+    <style>
+        /* 
+        ==========================
+        ESTILIZAÇÃO DO <h1>
+        ==========================
+        */
+
+        h1{ 
+            /* 
+            O elemento <h1> é do tipo box-level:
+            - ocupa toda a largura disponível por padrão
+            - aceita width, height, margin, padding, border etc.
+            */
+
+            /* Cor de fundo da caixa */
+            background-color: lightgray;
+
+            /* Altura fixa da caixa */
+            height: 300px;
+
+            /* Largura fixa da caixa */
+            width: 300px;
+
+            /* 
+            Borda da caixa:
+            10px  → espessura
+            solid → estilo
+            darkslategray → cor
+            */
+            border: 10px solid darkslategray;
+
+            /* 
+            A linha acima equivale a usar separadamente:
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategray;
+            */
+
+            /* 
+            Espaçamento interno (entre o conteúdo e a borda):
+            10px → top e bottom
+            20px → right e left
+            */
+            padding: 10px 20px;
+
+            /* 
+            O comando acima equivale a:
+            padding-top: 10px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            */
+
+            /* 
+            Margin controla o espaço externo da caixa.
+            auto nos lados esquerdo e direito centraliza o elemento horizontalmente.
+            */
+            margin:20px auto 40px auto;
+
+            /* 
+            A linha acima equivale a:
+            margin-top: 20px;
+            margin-right: auto;
+            margin-bottom: 40px;
+            margin-left: auto;
+            */
+
+            /* 
+            Outline é semelhante à borda, mas:
+            - não ocupa espaço no layout
+            - fica "por fora" da borda
+            */
+            outline: 5px dashed salmon;
+
+            /* 
+            O comando acima equivale a:
+            outline-width: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
+            */
+        }
+
+        /* 
+        ==========================
+        ESTILIZAÇÃO DO <a> (link)
+        ==========================
+        */
+
+        a{
+            /* 
+            Por padrão, <a> é inline-level.
+            Com display: block, ele passa a se comportar como box-level,
+            aceitando largura, altura e quebrando linha.
+            */
+            display: block;
+
+            /* Definição manual da borda do link */
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+            
+            /* Espaçamento interno do link */
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Exemplo de elemento box-level -->
+    <h1>Exemplo de caixa box-level</h1>
+
+    <!-- 
+    <p> também é box-level.
+    O <a> dentro do parágrafo, por padrão, é inline-level,
+    mas foi transformado em block via CSS.
+    -->
+    <p>
+        <strong>Parágrafos</strong> também são exemplos de box-level, 
+        MAS os <a href="#">links</a> são exemplos de caixas inline-level.
+    </p> 
+
+    <!-- Parágrafo comum apenas para visualização -->
+    <p>Vamos vê como tudo isso funciona.</p>
+
+</body>
+</html>
