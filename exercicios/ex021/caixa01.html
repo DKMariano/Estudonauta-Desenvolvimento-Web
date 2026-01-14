@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- 
+    Declara que este documento usa HTML5.
+    É obrigatório e ajuda o navegador a interpretar corretamente o código.
+-->
+<html lang="pt-br">
+<!-- 
+    Define o idioma principal da página como português do Brasil.
+    Isso ajuda em acessibilidade, SEO e leitores de tela.
+-->
+<head>
+    <meta charset="UTF-8">
+    <!-- 
+        Define a codificação de caracteres como UTF-8.
+        Permite o uso correto de acentos e caracteres especiais.
+    -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 
+        Faz a página se adaptar corretamente a telas menores,
+        como celulares e tablets (responsividade).
+    -->
+
+    <title>Modelo de Caixas</title>
+    <!-- 
+        Título que aparece na aba do navegador.
+    -->
+
+    <style>
+        /* 
+            Estilização do elemento <h1>
+            O h1 é um elemento do tipo box-level (ocupa toda a largura disponível)
+        */
+        h1{
+            background-color: lightgray;
+            /* Cor de fundo da caixa */
+
+            height: 300px;
+            /* Altura fixa da caixa */
+
+            width: 300px;
+            /* Largura fixa da caixa */
+
+            border-width: 10px;
+            /* Espessura da borda */
+
+            border-style: solid;
+            /* Tipo da borda (linha sólida) */
+
+            border-color: darkslategray;
+            /* Cor da borda */
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /* 
+                Espaçamento interno entre o conteúdo (texto)
+                e a borda da caixa
+            */
+        }
+
+        /* 
+            Estilização do elemento <a> (link)
+            O link é um elemento inline-level (não quebra linha)
+        */
+        a{
+            border-width: 10px;
+            /* Espessura da borda do link */
+
+            border-style: solid;
+            /* Tipo da borda */
+
+            border-color: red;
+            /* Cor da borda */
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /* 
+                Espaçamento interno do link,
+                aumentando a área clicável
+            */
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 
+        Cabeçalho principal da página.
+        Como é box-level, ele ocupa uma "caixa" completa.
+    -->
+    <h1>Exemplo de caixa box-level</h1>
+
+    <!-- 
+        Parágrafo também é um elemento box-level.
+        O link dentro do parágrafo é inline-level.
+    -->
+    <p>
+        <strong>Parágrafos</strong> também são exemplos de box-level, 
+        MAS os <a href="#">links</a> são exemplos de caixas inline-level.
+    </p> 
+
+    <!-- 
+        Outro parágrafo apenas para complementar o exemplo.
+    -->
+    <p>Vamos vê como tudo isso funciona.</p>
+</body>
+</html>
